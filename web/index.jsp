@@ -6,15 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Login</title>
   </head>
-
-
-
-
   <body>
   <div id="header">
     <h1>JiaXueChenMing Cafe shop</h1>
@@ -40,8 +37,8 @@
       <br>
       <input type="submit" value="Login in">
     </form>
-    <form name="register" action="http://127.0.0.1:5000/index"
-          method="get">
+    <form name="register" action="http://127.0.0.1:5000/index?companyID=<%="001"%>"
+          method="post">
       <input type="submit" value="Register"/>
     </form>
   </div>
@@ -61,6 +58,22 @@
   <div id="footer">
     Copyright JXCM
   </div>
-
+  <script type = "text/javascript">
+      function onRegister(){
+          var companyID = "001";
+          alert(companyID);
+          $.ajax({
+              type:'post',
+              url:'http://127.0.0.1:5000/login',
+              data: { companyID : companyID},
+              success: function(data){
+                  Console.log("Success!")
+              },
+              error: function(data){
+                  Console.log("Error!")
+              }
+          });
+      }
+   </script>
   </body>
 </html>

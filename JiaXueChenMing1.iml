@@ -33,5 +33,8 @@
     </orderEntry>
     <orderEntry type="library" name="servlet-api" level="project" />
     <orderEntry type="library" name="jsp-api" level="project" />
+    <orderEntry type="library" name="@types/jsonquery" level="application" />
+    <orderEntry type="library" name="@types/jquery" level="application" />
+    <orderEntry type="library" name="@types/jquery-ajax-chain" level="application" />
   </component>
 </module>
